@@ -1,0 +1,110 @@
+// main: style.less
+
+.description {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.description-title {
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-size: 3.33rem;
+    color: @dark-blue;
+}
+
+.description-text {
+    max-width: 550px;
+    margin-bottom: 50px;
+    color: @light-purple;
+}
+
+.description-text p {
+    margin-bottom: 35px;
+}
+
+.description-text p:last-child {
+    margin: 0;
+}
+
+.description-feature {
+    display: flex;
+    align-items: center;
+}
+
+.description-feature svg {
+    width: 30px;
+    height: 30px;
+    fill: @light-blue;
+}
+
+.description-feature p {
+    margin-left: 10px;
+    font-size: 1.22rem;
+    color: @light-blue;
+}
+
+.description-bg-image {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    max-width: 55%;
+}
+
+@media (max-width: 992px) {
+    .description-title {
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+
+    .description-text {
+        margin-bottom: 30px;
+        font-size: 0.8rem;
+    }
+
+    .description-text p {
+        margin-bottom: 25px;
+    }
+
+    .description-feature p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .description {
+        padding: 20px 0 60px;
+    }
+
+    .description-bg-image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 50px;
+        max-width: 100%;
+        right: 0;
+    }
+
+    .description-inner {
+        text-align: center;
+    }
+
+    .description-feature {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .description-title {
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+    }
+
+    .description-text p {
+        margin-bottom: 15px;
+    }
+
+    .description-feature p {
+        font-size: 0.8rem;
+    }
+}

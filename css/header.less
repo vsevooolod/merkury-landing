@@ -1,0 +1,213 @@
+// main: style.less
+
+.header {
+    background: @dark-blue url("../img/intro-grid.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.header-top {
+    padding: 30px 0;
+}
+
+.header-top-brand {
+    flex-basis: 15%;
+}
+
+.navbar-toggler {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.burger-line {
+    display: block;
+    margin: 20% auto;
+    width: 80%;
+    height: 10%;
+    background-color: @white;
+
+    border-radius: 20px;
+}
+
+.navbar-link {
+    padding: 0 25px;
+    font-size: 1rem;
+    font-family: @roboto;
+    font-weight: 400;
+    color: @white;
+    text-decoration: none;
+
+    transition: all .2s linear;
+}
+
+.navbar-link:hover {
+    color: @light-blue;
+}
+
+.header-top-btn-login {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-family: @roboto;
+    font-weight: 400;
+    color: @light-blue;
+    text-decoration: none;
+
+    border: 2px solid @light-blue;
+    border-radius: 20px;
+
+    transition: all .2s linear;
+}
+
+.header-top-btn-login:hover {
+    border-color: @white;
+    color: @white;
+}
+
+.header-intro {
+    padding: 30px 0 60px;
+}
+
+.header-intro-content {
+    margin-bottom: 40px;
+}
+
+.header-intro-title {
+    color: @white;
+    font-weight: 300;
+    font-size: 3.33rem;
+}
+
+.header-intro-subtitle {
+    color: @light-purple;
+    font-size: 2rem;
+}
+
+.header-intro-btn {
+    padding: 15px 50px;
+    background-color: @light-blue;
+    border-radius: 20px;
+
+    color: @white;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: all .3s linear;
+
+    &:hover {
+        background-color: rgba(@light-blue, 0.8);
+        color: @white;
+    }
+}
+
+.header-intro-img {
+    position: absolute;
+    bottom: -10%;
+}
+
+.header-intro-img img {
+    max-width: 784px;
+}
+
+@media (max-width: 992px) {
+    .header {
+        height: auto;
+    }
+    
+    .header-top {
+        padding: 20px 0;
+    }
+
+    .header-top-brand {
+        flex-basis: 20%;
+    }
+
+    .navbar-nav {
+        padding: 30px 0;
+        background-color: @light-blue;
+        border-radius: 20px;
+    }
+
+    .header-top-btn-login {
+        color: @dark-blue;
+        border-color: @dark-blue;
+    }
+
+    .navbar-link:hover {
+        color: @dark-blue;
+    }
+
+    .header-intro-title {
+        font-size: 1.5rem;
+    }
+
+    .header-intro-subtitle {
+        font-size: 1rem;
+    }
+
+    .header-intro-btn {
+        padding: 10px 40px;
+        background-color: @light-blue;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+
+    .header-intro-img {
+        position: relative;
+    }
+
+    .header-intro-content {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        padding: 10px 0;
+    }
+    
+    .header-top-brand {
+        flex-basis: 30%;
+    }
+
+    .navbar-toggler {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .navbar-link,
+    .header-top-btn-login {
+        font-size: 0.8rem;
+    }
+
+    .header-intro-content,
+    .header-intro-btn {
+        text-align: center;
+    }
+
+    .header-intro-img {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-intro-title {
+        font-size: 1rem;
+    }
+
+    .header-intro-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .header-intro-btn a {
+        padding: 10px 30px;
+        background-color: @light-blue;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+}

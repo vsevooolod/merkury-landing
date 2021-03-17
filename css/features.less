@@ -1,0 +1,91 @@
+// main: style.less
+
+.features {
+    padding: 80px 0;
+    background: @dark-blue url("../img/intro-grid.png") no-repeat center;
+    background-size: cover;
+}
+
+.features-title {
+    margin-bottom: 45px;
+    font-weight: 300;
+    font-size: 3.33rem;
+    color: @white;
+}
+
+.features-text {
+    color: @light-purple;
+}
+
+.features-text p {
+    margin-bottom: 35px;
+}
+
+.features-text p:last-child {
+    margin: 0;
+}
+
+.carousel-control-prev {
+    height: 120%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.carousel-control-prev:hover .carousel-prev-icon {
+    transform: translateX(-150%);
+}
+
+.carousel-control-next {
+    height: 120%;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.carousel-control-next:hover .carousel-next-icon {
+    transform: translateX(150%);
+}
+
+.carousel-prev-icon,
+.carousel-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all .2s linear;
+}
+
+.carousel-prev-icon svg,
+.carousel-next-icon svg {
+    fill: @light-purple;
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding: 50px 0 100px;
+    }
+
+    .features-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+    }
+
+    .features-text p {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-title {
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .features-text p {
+        margin-bottom: 15px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-control-prev:hover .carousel-prev-icon,
+    .carousel-control-next:hover .carousel-next-icon {
+        transform: none;
+    }
+}

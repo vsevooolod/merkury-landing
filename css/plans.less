@@ -1,0 +1,204 @@
+// main: style.less
+
+.plans {
+    margin-top: 65px;
+    padding-bottom: 65px;
+    overflow: hidden;
+}
+
+.plans-title {
+    margin-bottom: 65px;
+    color: @dark-blue;
+    font-size: 3.33rem;
+    font-weight: 300;
+}
+
+.plans-inner {
+    margin-bottom: 20px;
+}
+
+.plans-item {
+    margin-bottom: 45px;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.1);
+    max-width: 360px;
+
+    transition: all .3s linear;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow:  0px 0px 26px 0px rgba(0,0,0,0.3);;
+    }
+}
+
+.plans-item-title {
+    margin-bottom: 40px;
+    font-size: 1.33rem;
+    text-transform: uppercase;
+    color: @dark-blue;
+}
+
+.plans-item-price {
+    margin-bottom: 40px;
+    font-size: 1.33rem;
+    color: @light-purple;
+
+    & strong {
+        font-size: 4rem;
+        color: @dark-blue;
+    }
+}
+
+.plans-item-option {
+    margin-bottom: 10px;
+}
+
+.plans-item-option:last-child {
+    margin-bottom: 0;
+}
+
+.plans-item-option {
+
+    &--minus svg {
+        height: 30px;
+        width: 30px;
+        fill: @hard-pink;
+    }
+
+    &--plus svg {
+        height: 30px;
+        width: 30px;
+        fill: @light-blue;
+    }
+}
+
+.plans-item-option-text {
+    margin-left: 15px;
+    color: @light-purple;
+}
+
+.plans-description {
+    text-align: center;
+    max-width: 875px;
+    margin: 0 auto 65px;
+
+    & p {
+        color: @light-purple;
+    }
+}
+
+.plans-btn {
+    text-align: center;
+    
+
+    & a {
+        padding: 15px 60px;
+        color: @white;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: @light-blue;
+        border-radius: 20px;
+        position: relative;
+
+        transition: all .3s linear;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: @light-purple;
+            position: absolute;
+            left: -125%;
+            top: 50%;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: @light-purple;
+            position: absolute;
+            left: 125%;
+            top: 50%;
+        }
+
+        &:hover {
+            background-color: @dark-blue;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .plans-title {
+        font-size: 2.5rem;
+    }
+
+    .plans-item {
+        padding: 20px;
+    }
+
+    .plans-item-title {
+        margin-bottom: 20px;
+        font-size: 1.33rem;
+    }
+
+    .plans-item-price {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    
+        & strong {
+            font-size: 3rem;
+        }
+    }
+
+    .plans-item-option-text {
+        font-size: 0.8rem;
+    }
+
+    .plans-description {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 576px) {
+    .plans-title {
+        font-size: 2rem;
+    }
+
+    .plans-item-title {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .plans-item-price {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    
+        & strong {
+            font-size: 2rem;
+        }
+    }
+
+    .plans-description {
+        max-width: 400px;
+        font-size: 0.8rem;
+        margin-bottom: 40px;
+    }
+
+    .plans-btn {
+        & a {
+
+            &:after {
+                display: none;
+            }
+    
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
